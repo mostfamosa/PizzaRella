@@ -4,7 +4,7 @@ import { SubHeading } from '../../components';
 import { BsInstagram, BsArrowRightShort, BsArrowLeftShort } from 'react-icons/bs';
 import './Gallery.css';
 
-const myimages = [images.gallery01, images.gallery02, images.gallery03, images.gallery04]
+const myimages = [images.pizza1, images.pizza2, images.pizza3, images.pizza4, images.pizza5, images.pizza6, images.pizza7, images.pizza8, images.pizza9, images.pizza10, images.pizza11, images.pizza12]
 function Gallery() {
 
   const scrollRef = React.useRef(null);
@@ -35,8 +35,11 @@ function Gallery() {
         <div className='app__gallery-images_container' ref={scrollRef}>
           {myimages.map((image, index) => (
             <div className='app__gallery-images_card flex__center' key={`gallery_image-${index + 1}`}>
-              <img src={image} alt='galleryimg' />
+              <a href='https://www.instagram.com/pizza_rilla/'>
+                <img src={image} alt='galleryimg' />
+              </a>
               <BsInstagram className='gallery__image-icon' />
+
             </div>
           ))}
         </div>
